@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    name: Typecheck, test, validate and render
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install dependencies
+        run: npm install
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Run tests
+        run: npm test
+      - name: Validate concept specifications
+        run: npm run validate:examples
+      - name: Build editable PowerPoint proof
+        run: npm run build:demo
+      - name: Upload generated proof
+        uses: actions/upload-artifact@v4
+        with:
+          name: ppd-three-concept-proof
+          path: artifacts/ppd-three-concept-proof.pptx
+          if-no-files-found: error

@@ -1,0 +1,68 @@
+{
+  "version": "0.1",
+  "id": "concept-03-technical-architecture",
+  "title": "One design specification. Two renderers. One verified deck.",
+  "takeaway": "A shared, structured slide specification should drive preview and native PowerPoint output, followed by output-level quality checks.",
+  "narrativeRole": "process",
+  "visualDirection": "technical",
+  "compositionBrief": "A precise left-to-right architecture diagram with a shared specification feeding two output paths. Use editable native rectangles, labels and connectors. Keep the diagram readable, aligned and free of iconography or pseudo-3D objects.",
+  "elements": [
+    {
+      "id": "headline",
+      "type": "text",
+      "role": "headline",
+      "text": "One design specification. Two renderers. One verified deck."
+    },
+    {
+      "id": "architecture",
+      "type": "diagram",
+      "description": "The intended PPD architecture: a brief and evidence are converted into a structured slide specification; that specification drives high-fidelity preview/PDF and native PowerPoint renderers; both outputs are inspected before delivery. This diagram describes the target architecture, not the current implementation boundary.",
+      "nodes": [
+        "Brief and evidence",
+        "Structured slide spec",
+        "Visual preview and PDF",
+        "Native editable PPTX",
+        "Rendered quality checks",
+        "Approved output"
+      ],
+      "relationships": [
+        {
+          "from": "Brief and evidence",
+          "to": "Structured slide spec",
+          "label": "analyse"
+        },
+        {
+          "from": "Structured slide spec",
+          "to": "Visual preview and PDF",
+          "label": "render"
+        },
+        {
+          "from": "Structured slide spec",
+          "to": "Native editable PPTX",
+          "label": "render"
+        },
+        {
+          "from": "Visual preview and PDF",
+          "to": "Rendered quality checks",
+          "label": "inspect"
+        },
+        {
+          "from": "Native editable PPTX",
+          "to": "Rendered quality checks",
+          "label": "inspect"
+        },
+        {
+          "from": "Rendered quality checks",
+          "to": "Approved output",
+          "label": "pass"
+        }
+      ]
+    }
+  ],
+  "sources": [],
+  "constraints": {
+    "allowAiGeneratedImages": false,
+    "allowDecorativeIcons": false,
+    "preserveEditableObjects": true
+  }
+}

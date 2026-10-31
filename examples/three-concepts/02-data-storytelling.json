@@ -1,0 +1,40 @@
+{
+  "version": "0.1",
+  "id": "concept-02-data-storytelling",
+  "title": "Quality is built in the passes after the first draft",
+  "takeaway": "A presentation quality system must reserve time and attention for composition, critique and refinement—not just first-pass generation.",
+  "narrativeRole": "evidence",
+  "visualDirection": "editorial",
+  "compositionBrief": "A restrained data-storytelling slide with one source-labelled illustrative distribution, custom horizontal bars and an interpretation. The illustrative status must be visible on the exported slide. Do not use generic cards or decorative icons.",
+  "elements": [
+    { "id": "headline", "type": "text", "role": "headline", "text": "Quality is built in the passes after the first draft" },
+    {
+      "id": "effort-chart",
+      "type": "chart",
+      "chartType": "bar",
+      "title": "Illustrative distribution of design effort",
+      "unit": "% effort",
+      "interpretation": "Review and refinement receive the largest share in this example. Real decks must replace these illustrative values with measured or sourced evidence.",
+      "dataStatus": "illustrative",
+      "data": [
+        { "label": "Brief and evidence", "value": 15 },
+        { "label": "Art direction", "value": 22 },
+        { "label": "Composition", "value": 28 },
+        { "label": "Review and refinement", "value": 35 }
+      ],
+      "sourceReferenceIds": ["ppd-synthetic-example"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "ppd-synthetic-example",
+      "title": "PPD synthetic demonstration values — illustrative only, not measured industry data",
+      "kind": "illustrative"
+    }
+  ],
+  "constraints": {
+    "allowAiGeneratedImages": false,
+    "allowDecorativeIcons": false,
+    "preserveEditableObjects": true
+  }
+}

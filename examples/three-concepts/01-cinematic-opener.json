@@ -1,0 +1,20 @@
+{
+  "version": "0.1",
+  "id": "concept-01-cinematic-opener",
+  "title": "Presentations should feel designed, not generated",
+  "takeaway": "PPD treats presentation creation as a deliberate design process, not a template-filling task.",
+  "narrativeRole": "opening",
+  "visualDirection": "cinematic",
+  "compositionBrief": "A typography-led opening on a deep ink field. Use one oversized editorial headline, a restrained eyebrow, a short supporting line and a single accent rule. No stock imagery, decorative iconography, generic gradients or floating shapes.",
+  "elements": [
+    { "id": "eyebrow", "type": "text", "role": "eyebrow", "text": "PPD / PREMIUM PRESENTATION DESIGN SYSTEM" },
+    { "id": "headline", "type": "text", "role": "headline", "text": "Presentations should feel designed, not generated" },
+    { "id": "subtitle", "type": "text", "role": "caption", "text": "A quality-first system for narrative, art direction and editable output." }
+  ],
+  "sources": [],
+  "constraints": {
+    "allowAiGeneratedImages": false,
+    "allowDecorativeIcons": false,
+    "preserveEditableObjects": true
+  }
+}
